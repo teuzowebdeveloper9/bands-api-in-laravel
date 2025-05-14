@@ -28,6 +28,6 @@ Route::post('hello-post', 'App\Http\Controllers\HelloLaravelController@hello');
 
 Route::get('bands', 'App\Http\Controllers\BandController@getall');
 Route::get('bands/{id}', 'App\Http\Controllers\BandController@getById');
-Route::get('','');
+Route::get('bands/genre/{genre}','App\Http\Controllers\BandController@getByGenre');
 
 
