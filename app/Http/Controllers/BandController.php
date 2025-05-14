@@ -5,7 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class BandController extends Controller
+
 {
+    public function store(Request $request){
+       $validate = $request-> validate([
+        'name' => 'required|min:3',
+        'genre' => 'required|min:3',
+        'origin' => 'required|min:3',
+       ]);
+
+       return response() ->json($request-> all());
+    }
+
+
     public function getById($id)
 {
     $bands = [
