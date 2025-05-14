@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloLaravelController;
+use App\Http\Controllers\BandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,9 @@ Route::get('hello/{nome}', function ($nome){
 } );
 
 Route::post('hello-post', 'App\Http\Controllers\HelloLaravelController@hello');
+
+Route::get('bands', 'App\Http\Controllers\BandController@getall');
+Route::get('bands/{id}', 'App\Http\Controllers\BandController@getById');
+Route::get('','');
+
 
